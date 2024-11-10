@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Navigation Bar</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Navigation bar styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        /* Logo styling */
+        .navbar .logo {
+            margin-right: 50px;
+        }
+        .navbar .logo img {
+            height: 30px; /* Adjust logo height as needed */
+        }
+        /* Navigation links styling */
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        /* Add hover effect */
+        .navbar .nav-links a:hover {
+            color: #0078e7; /* Change to preferred hover color */
+        }
+        .prem{
+            width: 800px;
+            height: 400px;
+            border: 1px solid red;
+            display: flex;
+            gap: 10px;
+            padding: 50px;
+        }
+        .gavai{
+            border: 2px solid black;
+            width: 300px;
+            height: 200px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <!-- Logo section -->
+        <div class="logo">
+            <img src="https://w7.pngwing.com/pngs/319/931/png-transparent-logo-the-walt-disney-company-brand-symbol-logo-disney-text-logo-monochrome.png" alt="Disney Logo">
+        </div>
+        <!-- Navigation links -->
+        <div class="nav-links">
+            <a href="#parks">PARKS</a>
+            <a href="#cruise">CRUISE</a>
+            <a href="#whats-new">WHAT'S NEW</a>
+        </div>
+    </div>
+    <div class="prem">
+        <div class="gavai"></div>
+        <div class="gavai"></div>
+        <div class="gavai"></div>
+        <div class="gavai"></div>
+    </div>
+
+</body>
+</html>

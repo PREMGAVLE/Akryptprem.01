@@ -1,0 +1,10 @@
+ .nevbar{
+    border: 1px solid red;
+    display: flex;
+    justify-items: left;
+    gap: 30px;
+    width: 1000px;
+    text-size-adjust: 20px;
+
+ }
+ 

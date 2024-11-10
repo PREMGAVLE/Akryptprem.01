@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+.container{
+     width: 600px;
+     height: 300px;margin: 150px;
+
+        }
+.navigation {
+    background-color: yellow;
+    padding: 20px;
+    width: 520px;
+    font-weight: bold;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.container2 {
+    
+    display: flex;
+    padding: 20px;
+}
+
+.left-box {
+    background-color: red;
+    width: 400px;
+    padding: 20px;
+    color: white;
+    
+    font-weight: bold;
+}
+
+.right-box {
+    display: flex;
+    flex-direction: column;
+    width:200px;
+    gap: 5px;
+    padding-left: 20px;
+}
+
+ .box {
+    background-color: lightgreen;
+    padding: 20px;
+    
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="navigation">Navigation</div>
+    <div class="container2">
+        <div class="left-box">LEFT BOX</div>
+        <div class="right-box">
+            <div class="box">RIGHT Box1</div>
+            <div class="box">RIGHT Box2</div>
+            <div class="box">RIGHT Box3</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

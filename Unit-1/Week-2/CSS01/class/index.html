@@ -1,1 +1,114 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0b1c26;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Specific styling for the Cooking card */
+        .card.cooking {
+            background-color: #e91e63;
+            color: white;
+        }
+
+        .card.cooking p {
+            color: #f3e5f5;
+        }
+
+        /* Text styling for the header */
+        .header-text {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            width: 100%;
+            font-size: 2rem;
+            color: #d4ff00;
+        }
+        
+        .header-text span {
+            color: #ffffff;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Coding Card -->
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Coding">
+            <h3>CODING</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id repudiandae dolore veritatis nisi eos delectus.</p>
+        </div>
+
+        <!-- Cooking Card -->
+        <div class="card cooking">
+            <img src="https://via.placeholder.com/100" alt="Cooking">
+            <h3>COOKING</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id repudiandae dolore veritatis nisi eos delectus.</p>
+        </div>
+
+        <!-- Cycling Card -->
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Cycling">
+            <h3>CYCLING</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id repudiandae dolore veritatis nisi eos delectus.</p>
+        </div>
+    </div>
+
+    <div class="header-text">FLEXBOX <span>CSS</span></div>
+
+</body>
+</html>

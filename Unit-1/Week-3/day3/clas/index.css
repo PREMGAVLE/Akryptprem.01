@@ -1,0 +1,48 @@
+ .contaner{
+    width: 800px;
+    height: 300px;
+    gap: 10px;
+ }
+ .key{
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+
+gap: 10px;
+
+ }
+ .btn{
+    background-color: black;
+    color: white;
+    
+ }
+ .ent{
+    
+    text-align: center;
+    justify-items: center;
+    
+    
+ }
+ .ent2{
+    
+    display: grid;
+    grid-column-start: 11;
+    grid-column-end:13;
+    
+    background-color: red;
+    
+    
+ }
+  
+    
+ 
+ .ent4{
+    
+    display: grid;
+    grid-column-start:4;
+    grid-column-end:8;
+    
+    background-color: red;
+    
+    
+ }
