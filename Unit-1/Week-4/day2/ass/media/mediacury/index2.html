@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .media {
+            background-color: yellow;
+            text-align: center;
+
+        }
+
+        @media screen and (min-width:0px) and (max-width:480px) {
+            .media {
+                text-align: left;
+                background-color: red;
+
+            }
+
+        }
+
+        @media screen and (min-width:480px) and (max-width:768px) {
+            .media {
+                text-align: center;
+                background-color: rgb(38, 0, 255);
+
+            }
+
+        }
+
+        #container {
+            display: flex;
+             justify-content: center;  
+             padding: 20px;          gap: 15px;
+           
+
+        }
+        .image{
+            border: 1px solid red;
+            width: 200px;
+            height:300x;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        #img {
+            width: 100%;
+            
+
+        }
+
+        @media screen and (min-width:0px) and (max-width:480px) {
+            #container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+                width: 100px;
+                justify-content: center;
+                margin-left:70px;
+
+
+
+            }
+            .image{
+                height: 400px;
+            }
+
+            .img {
+                width: 50%;
+            }
+            #btn{
+                display: grid;
+                grid-template-columns: repeat(1,0fr);
+                width: 100px;
+                height: 50px;
+                justify-content: center;
+                margin-left: 40px;
+            }
+
+        }
+
+        @media screen and (min-width:480px) and (max-width:768px) {
+            #container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                width: 250px;
+                padding: 20px;
+                margin-left:70px;
+                
+
+
+            }
+            /* .image{
+                height: 400px;
+            } */
+
+            .img {
+                width: 100px;
+            }
+
+
+
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <h1 class="media">Media Quries</h1>
+    <br>
+    <br>
+    <div id="container">
+        <div class="image">
+            <img id="img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBQJaCZ-yBTeq9M9CCmBMJSy9xM-vix6bpg&s"
+                alt="">
+                <h1>$500</h1>
+                <button id="btn">buy now</button>
+                <button id="btn">view more</button>
+        </div>
+        <div class="image">
+            <img id="img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBQJaCZ-yBTeq9M9CCmBMJSy9xM-vix6bpg&s"
+                alt="">
+                <h1>$500</h1>
+                <button id="btn">buy now</button>
+                <button id="btn">view more</button>
+        </div>
+        <div class="image">
+            <img id="img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBQJaCZ-yBTeq9M9CCmBMJSy9xM-vix6bpg&s"
+                alt="">
+                <h1>$500</h1>
+                <button id="btn">buy now</button>
+                <button id="btn">view more</button>
+        </div>
+        <div class="image">
+            <img id="img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrBQJaCZ-yBTeq9M9CCmBMJSy9xM-vix6bpg&s"
+                alt="">
+                <h1>$500</h1>
+                <button id="btn">buy now</button>
+                <button id="btn">view more</button>
+        </div>
+    </div>
+</body>
+
+</html>

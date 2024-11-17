@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/db927a23ed.js" crossorigin="anonymous"></script>
+    <style>
+        /* .body {
+            width: 400px;
+            height: 100%;
+
+        } */
+
+        .container {
+            background-color: aliceblue;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+            gap: 30px;
+            width: 1300px;
+            height: 50px;
+            margin-left: -5px;
+            padding: 20px;
+            justify-content: center;
+            text-align: center;
+            position: fixed;
+        }
+
+        @media screen and (max-width:480px) and (min-width:0px) {
+
+
+
+            .logo {
+                justify-items: center;
+                text-align: center;
+            }
+        }
+
+        .logo {
+            color: rgb(218, 16, 16);
+            margin-right: 10%;
+            cursor: pointer;
+            background-color: aliceblue;
+            padding-left: 80px;
+            width: 800px;
+            margin: -20px;
+            text-align: left;
+
+        }
+
+        .logo:hover {
+            background-color: rgb(173, 168, 168);
+        }
+
+        .edit {
+            color: black;
+            cursor: pointer;
+            text-align: center;
+            justify-items: center;
+
+
+        }
+
+        .edit:hover {
+            background-color: gray;
+        }
+
+        .img {
+            position: absolute;
+            top: 150px;
+            margin: 50px;
+            width: 400px;
+            display: flex;
+            text-align: left;
+            flex-direction: column;
+            cursor: pointer;
+            /* background-color: rgba(0, 0, 0, 0.5); */
+            color: whitesmoke;
+        }
+
+        @media screen and (max-width:768px) and (min-width:480px) {
+            .img {
+                text-align: left;
+
+            }
+
+        }
+
+        @media screen and (max-width:480px) and (min-width:0px) {
+            .img {
+                text-align: left;
+
+            }
+
+        }
+/* 
+        .img h1 {
+            /* font-size: 4.5rem;
+            margin-bottom: 20px;
+            width: 90%; */
+        /* }
+
+        .img p {
+
+            /* margin-bottom: 20px; */
+        
+
+        .container2 {
+            /* position: relative; */
+            /* width: 100%; */
+            /* max-width: 800px; */
+            /* text-align: center; */
+            /* margin-right: 50%; */
+            /* color: #fff; */
+            background-image: url("https://c0.wallpaperflare.com/preview/18/442/539/apple-device-computer-dark-electronics-thumbnail.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 700px;
+           
+
+        }
+
+        /* .background-img { */
+
+            /* width: 1400px;
+            height: 800px; */
+            /* padding: 95px;
+            padding-left: 0px;
+            margin-left: -15px; */
+
+
+        
+
+        .button {
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            color: #0e0d0d;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+
+        }
+
+        .container3 {
+            background-color: rgb(247, 237, 239);
+            /* width: 1000px; */
+            height: 500px;
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+        .container5 {
+
+            text-align: center;
+            /* width: 400px; */
+
+        }
+
+        .container4 {
+
+            text-align: center;
+            justify-items: center;
+            width: 50%;
+            margin: 125px;
+            margin-left: -0px;
+        }
+
+        #img22 {
+            width: 450px;
+            height: 50%;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        @media screen and (max-width:768px) and (min-width:480px) {
+            .container3 {
+                justify-content: center;
+            }
+
+        }
+
+        @media screen and (max-width:480px) and (min-width:0px) {
+            .container3 {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+        }
+
+        #button {
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 50px;
+        }
+
+        #button:hover {
+            background-color: rgb(247, 237, 239);
+            color: black;
+            cursor: pointer;
+        }
+
+        #team {
+            text-align: center;
+
+        }
+
+        #flex {
+            display: flex;
+            /* width: 100px; */
+            gap: 30px;
+            justify-items: center;
+            text-align: center;
+
+
+        }
+
+        @media screen and (max-width:768px) and (min-width:480px) {
+            #flex {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media screen and (max-width:480px) and (min-width:0px) {
+            #flex {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+        }
+
+        .buttonflex {
+            width: 300px;
+            background-color: pink;
+            text-decoration: none;
+
+        }
+
+        #work {
+            text-align: center;
+        }
+
+        #grideimg {
+            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media screen and (max-width:768px) and (min-width:480px) {
+            #grideimg {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media screen and (max-width:480px) and (min-width:0px) {
+            #grideimg {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+        }
+
+        #flex0 {
+            display: flex;
+
+            gap: 20px;
+
+
+            text-align: center;
+            width: 100%;
+
+
+        }
+
+        @media screen and (max-width:768px) and (min-width:480px) {
+            #flex0 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media screen and (max-width:480px) and (min-width:0px) {
+            #flex0 {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+        }
+
+
+        .flex2 {
+            background-color: rgb(121, 116, 116);
+            display: flex;
+            gap: 20%;
+            justify-content: center;
+            color: white;
+        }
+
+        #font {
+            font-size: 50px;
+
+        }
+
+        #container7 {
+            background-color: rgb(243, 230, 230);
+            width: 100%;
+            height: 300px;
+            text-align: left;
+            display: flex;
+            gap: 10px;
+
+        }
+
+        .skills {
+            text-align: center;
+
+
+        }
+
+        .skills p {
+            border: 1px solid rgb(231, 221, 221);
+            background-color: gray;
+        }
+
+        @media screen and (max-width:768px) and (min-width:480px) {
+            .skills {
+                font-size: 10px;
+                text-align: center;
+
+
+            }
+        }
+
+        @media screen and (max-width:480px) and (min-width:0px) {
+            .skills {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                font-size: 5px;
+            }
+
+        }
+
+        #container8 {
+            background-color: rgb(243, 237, 238);
+            width: 100%;
+            height: 100%;
+        }
+
+        #container8 h1 {
+            text-align: center;
+        }
+
+        #form {
+            font-size: 25px;
+            padding-left: -150px;
+
+
+        }
+
+        #form2 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+        #formbtn {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            width: 200px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        #formbtn:hover {
+            background-color: aliceblue;
+            color: black;
+
+        }
+
+        .footer {
+            background-color: black;
+            height: 150px;
+            color: white;
+            text-align: center;
+            text-align: center;
+            padding: 100px;
+        }
+
+        #footerbtn {
+            background-color: white;
+            border: none;
+            height: 40px;
+            width: 120px;
+            cursor: pointer;
+        }
+
+        #footerbtn:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>logo <h1></h1>
+        </div>
+        <p class="edit">ABOUT</p>
+        <p class="edit"> TEAM</p>
+        <p class="edit">WORK</p>
+        <p class="edit">PRICING</p>
+        <p class="edit">CONTACT</p>
+
+    </div>
+    <div class="container2">
+        <!-- <img src="https://c0.wallpaperflare.com/preview/18/442/539/apple-device-computer-dark-electronics-thumbnail.jpg"
+            alt="Laptop Background" class="background-img"> -->
+        <div class="img">
+            <h1>Start something that matters</h1>
+            <p>Stop wasting valuable time with projects that just isn’t you.</p>
+            <button class="button">Learn more and start today </button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container6">
+        <div id="team">
+            <h2>ABOUT THE COMPANY</h2>
+            <P>Key features of our company</P>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="flex0">
+            <div>
+                <i id="font" class="fa-solid fa-tv"></i>
+                <h1>Responsive</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laborum sit expedita
+                    perspiciatis tempora Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+            </div>
+            <div>
+                <i id="font" class="fa-solid fa-heart"></i>
+                <h1>Responsive</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laborum sit expedita
+                    perspiciatis tempora Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+            </div>
+            <div>
+                <i id="font" class="fa-solid fa-diamond"></i>
+                <h1>Responsive</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laborum sit expedita
+                    perspiciatis tempora Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+            </div>
+
+            <div>
+                <i id="font" class="fa-solid fa-gear"></i>
+                <h1>Responsive</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laborum sit expedita
+                    perspiciatis tempora Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container3">
+            <div class="container4">
+                <h1> We know design.</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing eli suscipit tempore repudiandae, debitis in
+                    excepturi ipsum mol</p>
+                <button id="button"> <i class="fa-solid fa-box"></i><span> view Our Work </span> </button>
+
+            </div>
+            <div id="img22">
+                <img style="width: 100%;" src="https://www.w3schools.com/w3images/phone_buildings.jpg" alt="">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container5">
+            <div id="team10">
+                <h2> THE TEAM</h2>
+                <P>The ones who runs this company</P>
+            </div>
+
+            <br>
+            <br>
+            <br>
+           
+            <div id="flex">
+                <div style="width: 300px; ">
+                    <img style="width: 100%;" src="https://www.w3schools.com/w3images/team2.jpg" alt="">
+                    <h1>John Doe</h1>
+                    <p> CEO% Founder</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                    <button class="buttonflex">Contact</button>
+                </div>
+                <div style="width: 300px;">
+                    <img  style="width: 100%;" src="https://www.w3schools.com/w3images/team1.jpg" alt="">
+                    <h1>John Doe</h1>
+                    <p> CEO% Founder</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                    <button class="buttonflex">Contact</button>
+                </div>
+                <div style="width: 300px;">
+                    <img style="width: 100%;" src="https://www.w3schools.com/w3images/team4.jpg" alt="">
+                    <h1>John Doe</h1>
+                    <p> CEO% Founder</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                    <button class="buttonflex">Contact</button>
+                </div>
+                <div style="width: 300px;">
+                    <img style="width: 100%;" src="https://www.w3schools.com/w3images/team3.jpg" alt="">
+                    <h1>John Doe</h1>
+                    <p> CEO% Founder</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                    <button class="buttonflex">Contact</button>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="flex2">
+            <div>
+                <h1>14+</h1>
+                <p>Partners</p>
+            </div>
+            <div>
+                <h1>55+</h1>
+                <p>Project done</p>
+            </div>
+            <div>
+                <h1>89+</h1>
+                <p>Happy Clients</p>
+            </div>
+            <div>
+                <h1>150+</h1>
+                <p>meetings</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div id="work">
+
+            <h2> OUR WORK</h2>
+            <P>What we'v done for the people</P>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="grideimg">
+            <img src="https://www.w3schools.com/w3images/tech_mic.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/tech_phone.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/tech_drone.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/tech_sound.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/tech_tablet.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/tech_camera.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/tech_typewriter.jpg" alt="">
+            <img src="https://www.w3schools.com/w3images/tech_tableturner.jpg" alt="">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div id="container7">
+            <div>
+                <h2> Our Skills.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At error fugit corrupti, fuga in
+                    consequuntur laborum reiciendis dolores saepe quidem tenetur aliquam </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At error fugit corrupti, fuga in
+                    consequuntur laborum reiciendis dolores saepe quidem tenetur aliquam </p>
+            </div>
+            <div class="skills">
+                <h1>Photography</h1>
+                <p>90%</p>
+            </div>
+            <div class="skills">
+                <h1>Photography</h1>
+                <p>90%</p>
+            </div>
+            <div class="skills">
+                <h1>Photography</h1>
+                <p>90%</p>
+            </div>
+
+        </div>
+
+        <div id="container8">
+            <div>
+                <h1> CONTACT</h1>
+                <p style="text-align: center;"> Lets get touch. Send us a message:</p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="form">
+                <p> <i class="fa-solid fa-location-dot"></i> Chicago,US</p>
+                <p> <i class="fa-solid fa-phone"></i> Chicago,US</p>
+                <p> <i class="fa-solid fa-envelope"></i> Chicago,US</p>
+                <br>
+                <br>
+                <div id="form2">
+                    <input type="text" value="Name"><br>
+                    <input type="email" value="Email"><br>
+                    <input type="text" value="Subject"><br>
+                    <input type="text" value="Message">
+                </div> <br>
+                <button id="formbtn"><i class="fa-solid fa-paper-plane"></i>
+                    SEND MESSAGE </button>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img style="width: 99%;" src="https://www.w3schools.com/w3images/map.jpg" alt="">
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer class="footer">
+            <button id="footerbtn"><i class="fa-solid fa-jet-fighter-up"></i>To the top</button>
+            <br>
+            <br>
+            <br>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-snapchat"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <br>
+            <p> Powered by w3.css</p>
+        </footer>
+
+
+</body>
+
+</html>
