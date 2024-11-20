@@ -1,0 +1,506 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+
+.featured-products {
+    text-align: center;
+    padding: 20px;
+}
+
+.featured-products h1 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    padding: 15px;
+  
+    text-align: center;
+   
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+ transition: transform 0.2s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 1rem;
+}
+
+.rating .reviews {
+    color: #888;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.price {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 5px;
+}
+
+.price .discounted-price {
+    color: #000;
+    font-weight: bold;
+    
+}
+.price .discounted-price::before{
+    display: none;
+}
+
+.price .discount {
+    color: #28a745;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.view-all {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.view-all:hover {
+    background-color: #218838;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.quantity {
+  width: 40px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.add-to-cart {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: #218838;
+}
+
+.wishlist {
+  background: none;
+  border: none;
+  color: #e63946;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist:hover {
+  color: #c71d24;
+}
+
+
+
+
+        .container {
+            background-image: url(https://ogaenics.com/wp-content/uploads/2021/01/Curry.png);
+
+            background-size: cover;
+
+            width: 100%;
+            max-width: 950px;
+            padding: 20px;
+
+            margin: 100px;
+            display: flex;
+            height: 300px;
+        }
+        .content {
+            color: white;
+            text-align: left;
+            padding: 50px;
+
+
+            border-radius: 8px;
+        }
+        .content h1 {
+            margin: 0 0 15px;
+            font-size: 2.5em;
+            line-height: 1.2;
+        }
+        .content Br {
+            margin: 0 0 20px;
+            font-size: 1em;
+
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 50px;
+
+        }
+        .form input {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+
+            outline: none;
+            width: 400px;
+        }
+        .form input:focus {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        .form button {
+            padding: 10px;
+            font-size: 1em;
+            background-color: #000;
+            color: #fff;
+            border: none;
+
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form button:hover {
+            background-color: #444;
+        }
+        .fp2{
+            display: flex;
+            gap: 60%;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="featured-products">
+       <div class="fp2">
+        <h1>Featured products</h1> 
+       <button class="view-all">View All</button>
+       </div>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://themewagon.github.io/organic/images/product-thumb-10.png" alt="Greek Style Plain Yogurt">
+                <h2>Greek Style Plain Yogurt</h2>
+                <div class="rating">
+                    <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                    <span class="reviews">(222)</span>
+                </div>
+                <div class="price">
+                    <span class="original-price">$24.00</span>
+                    <span class="discounted-price">$18.00</span>
+                    <span class="discount">10% OFF</span>
+                </div>
+                <div class="actions">
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="wishlist">&#10084;</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://themewagon.github.io/organic/images/product-thumb-11.png" alt="Pure Squeezed No Pulp Orange Juice">
+                <h2>Pure Squeezed No Pulp Orange Juice</h2>
+                <div class="rating">
+                    <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                    <span class="reviews">(222)</span>
+                </div>
+                <div class="price">
+                    <span class="original-price">$24.00</span>
+                    <span class="discounted-price">$18.00</span>
+                    <span class="discount">10% OFF</span>
+                </div>
+                <div class="actions">
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="wishlist">&#10084;</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://themewagon.github.io/organic/images/product-thumb-12.png" alt="Fresh Oranges">
+                <h2>Fresh Oranges</h2>
+                <div class="rating">
+                    <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                    <span class="reviews">(222)</span>
+                </div>
+                <div class="price">
+                    <span class="original-price">$24.00</span>
+                    <span class="discounted-price">$18.00</span>
+                    <span class="discount">10% OFF</span>
+                </div>
+                <div class="actions">
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="wishlist">&#10084;</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://themewagon.github.io/organic/images/product-thumb-13.png" alt="Gourmet Dark Chocolate Bars">
+                <h2>Gourmet Dark Chocolate Bars</h2>
+                <div class="rating">
+                    <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                    <span class="reviews">(222)</span>
+                </div>
+                <div class="price">
+                    <span class="original-price">$24.00</span>
+                    <span class="discounted-price">$18.00</span>
+                    <span class="discount">10% OFF</span>
+                </div>
+                <div class="actions">
+                    <input type="number" class="quantity" value="1" min="1">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="wishlist">&#10084;</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <div class="content">
+            <h1>Get 25% Discount <br> on your first purchase</h1>
+            <br>Just Sign Up & Register it now to become a member.</br>
+        </div>
+        <div>
+            <form class="form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="featured-products">
+        <div class="fp2">
+         <h1>Featured products</h1> 
+        <button class="view-all">View All</button>
+        </div>
+         <div class="products">
+             <!-- Product 1 -->
+             <div class="product-card">
+                 <img src="https://themewagon.github.io/organic/images/product-thumb-10.png" alt="Greek Style Plain Yogurt">
+                 <h2>Greek Style Plain Yogurt</h2>
+                 <div class="rating">
+                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                     <span class="reviews">(222)</span>
+                 </div>
+                 <div class="price">
+                     <span class="original-price">$24.00</span>
+                     <span class="discounted-price">$18.00</span>
+                     <span class="discount">10% OFF</span>
+                 </div>
+                 <div class="actions">
+                     <input type="number" class="quantity" value="1" min="1">
+                     <button class="add-to-cart">Add to Cart</button>
+                     <button class="wishlist">&#10084;</button>
+                 </div>
+             </div>
+ 
+             <!-- Product 2 -->
+             <div class="product-card">
+                 <img src="https://themewagon.github.io/organic/images/product-thumb-11.png" alt="Pure Squeezed No Pulp Orange Juice">
+                 <h2>Pure Squeezed No Pulp Orange Juice</h2>
+                 <div class="rating">
+                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                     <span class="reviews">(222)</span>
+                 </div>
+                 <div class="price">
+                     <span class="original-price">$24.00</span>
+                     <span class="discounted-price">$18.00</span>
+                     <span class="discount">10% OFF</span>
+                 </div>
+                 <div class="actions">
+                     <input type="number" class="quantity" value="1" min="1">
+                     <button class="add-to-cart">Add to Cart</button>
+                     <button class="wishlist">&#10084;</button>
+                 </div>
+             </div>
+ 
+             <!-- Product 3 -->
+             <div class="product-card">
+                 <img src="https://themewagon.github.io/organic/images/product-thumb-12.png" alt="Fresh Oranges">
+                 <h2>Fresh Oranges</h2>
+                 <div class="rating">
+                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                     <span class="reviews">(222)</span>
+                 </div>
+                 <div class="price">
+                     <span class="original-price">$24.00</span>
+                     <span class="discounted-price">$18.00</span>
+                     <span class="discount">10% OFF</span>
+                 </div>
+                 <div class="actions">
+                     <input type="number" class="quantity" value="1" min="1">
+                     <button class="add-to-cart">Add to Cart</button>
+                     <button class="wishlist">&#10084;</button>
+                 </div>
+             </div>
+ 
+             <!-- Product 4 -->
+             <div class="product-card">
+                 <img src="https://themewagon.github.io/organic/images/product-thumb-13.png" alt="Gourmet Dark Chocolate Bars">
+                 <h2>Gourmet Dark Chocolate Bars</h2>
+                 <div class="rating">
+                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                     <span class="reviews">(222)</span>
+                 </div>
+                 <div class="price">
+                     <span class="original-price">$24.00</span>
+                     <span class="discounted-price">$18.00</span>
+                     <span class="discount">10% OFF</span>
+                 </div>
+                 <div class="actions">
+                     <input type="number" class="quantity" value="1" min="1">
+                     <button class="add-to-cart">Add to Cart</button>
+                     <button class="wishlist">&#10084;</button>
+                 </div>
+             </div>
+         </div>
+ 
+     </div>
+ 
+     <div class="featured-products">
+        <div class="fp2">
+         <h1>Featured products</h1> 
+        <button class="view-all">View All</button>
+        </div>
+         <div class="products">
+             <!-- Product 1 -->
+             <div class="product-card">
+                 <img src="https://themewagon.github.io/organic/images/product-thumb-10.png" alt="Greek Style Plain Yogurt">
+                 <h2>Greek Style Plain Yogurt</h2>
+                 <div class="rating">
+                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                     <span class="reviews">(222)</span>
+                 </div>
+                 <div class="price">
+                     <span class="original-price">$24.00</span>
+                     <span class="discounted-price">$18.00</span>
+                     <span class="discount">10% OFF</span>
+                 </div>
+                 <div class="actions">
+                     <input type="number" class="quantity" value="1" min="1">
+                     <button class="add-to-cart">Add to Cart</button>
+                     <button class="wishlist">&#10084;</button>
+                 </div>
+             </div>
+ 
+             <!-- Product 2 -->
+             <div class="product-card">
+                 <img src="https://themewagon.github.io/organic/images/product-thumb-11.png" alt="Pure Squeezed No Pulp Orange Juice">
+                 <h2>Pure Squeezed No Pulp Orange Juice</h2>
+                 <div class="rating">
+                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                     <span class="reviews">(222)</span>
+                 </div>
+                 <div class="price">
+                     <span class="original-price">$24.00</span>
+                     <span class="discounted-price">$18.00</span>
+                     <span class="discount">10% OFF</span>
+                 </div>
+                 <div class="actions">
+                     <input type="number" class="quantity" value="1" min="1">
+                     <button class="add-to-cart">Add to Cart</button>
+                     <button class="wishlist">&#10084;</button>
+                 </div>
+             </div>
+ 
+             <!-- Product 3 -->
+             <div class="product-card">
+                 <img src="https://themewagon.github.io/organic/images/product-thumb-12.png" alt="Fresh Oranges">
+                 <h2>Fresh Oranges</h2>
+                 <div class="rating">
+                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                     <span class="reviews">(222)</span>
+                 </div>
+                 <div class="price">
+                     <span class="original-price">$24.00</span>
+                     <span class="discounted-price">$18.00</span>
+                     <span class="discount">10% OFF</span>
+                 </div>
+                 <div class="actions">
+                     <input type="number" class="quantity" value="1" min="1">
+                     <button class="add-to-cart">Add to Cart</button>
+                     <button class="wishlist">&#10084;</button>
+                 </div>
+             </div>
+ 
+             <!-- Product 4 -->
+             <div class="product-card">
+                 <img src="https://themewagon.github.io/organic/images/product-thumb-13.png" alt="Gourmet Dark Chocolate Bars">
+                 <h2>Gourmet Dark Chocolate Bars</h2>
+                 <div class="rating">
+                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span> 
+                     <span class="reviews">(222)</span>
+                 </div>
+                 <div class="price">
+                     <span class="original-price">$24.00</span>
+                     <span class="discounted-price">$18.00</span>
+                     <span class="discount">10% OFF</span>
+                 </div>
+                 <div class="actions">
+                     <input type="number" class="quantity" value="1" min="1">
+                     <button class="add-to-cart">Add to Cart</button>
+                     <button class="wishlist">&#10084;</button>
+                 </div>
+             </div>
+         </div>
+ 
+     </div>
+ 
+ 
+
+   
+</body>
+</html>
