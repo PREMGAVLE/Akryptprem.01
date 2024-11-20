@@ -9,21 +9,19 @@
         .featured-products {
             text-align: center;
             padding: 20px;
-            width:100% ;
+        
         }
 
-        .featured-products h1 {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-
-        }
+       
+        
 
         .products {
             display: flex;
-            margin: 20px;
+            margin: 50px;
             flex-wrap: wrap;
             gap: 10px;
-            height: 500px;
+           
+            
   
         }
 
@@ -48,9 +46,10 @@
 
         .product-card img {
             max-width: 100%;
-            height: auto;
+            
             border-radius: 4px;
             margin-bottom: 15px;
+            cursor: pointer;
         }
 
         .product-card h2 {
@@ -97,16 +96,20 @@
         }
 
         .view-all {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             padding: 10px 20px;
-
+            margin: 17px;
+width: 100px;
+height: 50px;
             background-color: #28a745;
             color: #fff;
             border: none;
             border-radius: 5px;
             font-size: 1rem;
             cursor: pointer;
-        }
+            margin-right: 15%;
+            
+         }
 
         .view-all:hover {
             background-color: #218838;
@@ -119,6 +122,7 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
+            margin: 1px;
         }
 
         .quantity {
@@ -232,7 +236,18 @@
 
         .fp2 {
             display: flex;
-            gap: 70%;
+
+            justify-content: space-between;
+        }
+        @media screen and (min-width:0px) and (max-width:480px) {
+            .container{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                height: 450px;
+            }
+            .content{
+                margin-left: 10px;
+            }
         }
     </style>
 </head>
@@ -346,7 +361,7 @@
     </div>
     <div class="featured-products">
         <div class="fp2">
-            <h1>Featured products</h1>
+            <h1>Most popular products</h1>
             <button class="view-all">View All</button>
         </div>
         <div class="products">
@@ -354,7 +369,7 @@
             <div class="product-card">
                 <img src="https://themewagon.github.io/organic/images/product-thumb-15.png"
                     alt="Greek Style Plain Yogurt">
-                <h2>Greek Style Plain Yogurt</h2>
+                <h2>Sandwich Bread</h2>
                 <div class="rating">
                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
                     <span class="reviews">(222)</span>
@@ -375,7 +390,7 @@
             <div class="product-card">
                 <img src="https://themewagon.github.io/organic/images/product-thumb-16.png"
                     alt="Pure Squeezed No Pulp Orange Juice">
-                <h2>Pure Squeezed No Pulp Orange Juice</h2>
+                <h2> Honeycrisp Apples </h2>
                 <div class="rating">
                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
                     <span class="reviews">(222)</span>
@@ -395,7 +410,7 @@
             <!-- Product 3 -->
             <div class="product-card">
                 <img src="https://themewagon.github.io/organic/images/product-thumb-17.png">
-                <h2>Fresh Oranges</h2>
+                <h2>Whole Wheat Sandwich Bread</h2>
                 <div class="rating">
                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
                     <span class="reviews">(222)</span>
@@ -416,7 +431,7 @@
             <div class="product-card">
                 <img src="https://themewagon.github.io/organic/images/product-thumb-18.png"
                     alt="Gourmet Dark Chocolate Bars">
-                <h2>Gourmet Dark Chocolate Bars</h2>
+                <h2>Honeycrisp Apples</h2>
                 <div class="rating">
                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
                     <span class="reviews">(222)</span>
@@ -438,15 +453,15 @@
 
     <div class="featured-products">
         <div class="fp2">
-            <h1>Featured products</h1>
+            <h1>Just arrived</h1>
             <button class="view-all">View All</button>
         </div>
         <div class="products">
             <!-- Product 1 -->
             <div class="product-card">
-                <img src="https://themewagon.github.io/organic/images/product-thumb-10.png"
+                <img src="https://themewagon.github.io/organic/images/product-thumb-20.png"
                     alt="Greek Style Plain Yogurt">
-                <h2>Greek Style Plain Yogurt</h2>
+                <h2>Sunstar Fresh Melon Juice</h2>
                 <div class="rating">
                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
                     <span class="reviews">(222)</span>
@@ -465,9 +480,9 @@
 
             <!-- Product 2 -->
             <div class="product-card">
-                <img src="https://themewagon.github.io/organic/images/product-thumb-11.png"
+                <img src="https://themewagon.github.io/organic/images/product-thumb-1.png"
                     alt="Pure Squeezed No Pulp Orange Juice">
-                <h2>Pure Squeezed No Pulp Orange Juice</h2>
+                <h2>Whole Wheat Sandwich Bread</h2>
                 <div class="rating">
                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
                     <span class="reviews">(222)</span>
@@ -486,8 +501,8 @@
 
             <!-- Product 3 -->
             <div class="product-card">
-                <img src="https://themewagon.github.io/organic/images/product-thumb-12.png" alt="Fresh Oranges">
-                <h2>Fresh Oranges</h2>
+                <img src="https://themewagon.github.io/organic/images/product-thumb-21.png" alt="Fresh Oranges">
+                <h2>Sunstar Fresh Melon Juice </h2>
                 <div class="rating">
                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
                     <span class="reviews">(222)</span>
@@ -506,9 +521,9 @@
 
             <!-- Product 4 -->
             <div class="product-card">
-                <img src="https://themewagon.github.io/organic/images/product-thumb-13.png"
+                <img src="https://themewagon.github.io/organic/images/product-thumb-22.png"
                     alt="Gourmet Dark Chocolate Bars">
-                <h2>Gourmet Dark Chocolate Bars</h2>
+                <h2>Gourmet Dark Chocolate </h2>
                 <div class="rating">
                     <span>⭐ ⭐ ⭐ ⭐ ⭐</span>
                     <span class="reviews">(222)</span>
