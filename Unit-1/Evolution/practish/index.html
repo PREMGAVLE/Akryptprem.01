@@ -1,157 +1,136 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Product Card</title>
+  <title>Slider CSS</title>
+
   <style>
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f9f9f9;
-}
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-.product-card {
-  width: 250px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
+    .slider {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
 
-.product-card:hover {
-  transform: translateY(-5px);
-}
+    figure {
+      position: relative;
+      left: 0;
+      width: 400%;
+      /* width dikali slide */
+      animation: 10s slide infinite;
+    }
 
-.product-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+    .slide {
+      position: relative;
+      width: 25%;
+      /* width dibagi slide */
+      float: left;
+    }
 
-.product-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  margin: 10px 0;
-}
+    .slide h1 {
+      position: absolute;
+      font-size: 3em;
+      width: 100%;
+      text-align: center;
+      margin-top: 50px;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
 
-.rating {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  font-size: 14px;
-  color: #ffa500;
-  margin-bottom: 10px;
-}
+    .slide img {
+      width: 100%;
+      height: 500px;
+    }
 
-.stars {
-  color: #ffa500;
-}
+    @keyframes slide {
+      0% {
+        left: 0;
+      }
 
-.reviews {
-  color: #555;
-}
+      10% {
+        left: 0;
+      }
 
-.price-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
+      20% {
+        left: -100%;
+      }
 
-.original-price {
-  text-decoration: line-through;
-  color: #999;
-  font-size: 14px;
-}
+      30% {
+        left: -100%;
+      }
 
-.discounted-price {
-  font-size: 16px;
-  font-weight: bold;
-  color: #e63946;
-}
+      40% {
+        left: -200%;
+      }
 
-.discount-badge {
-  background: #f4c430;
-  color: #fff;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 5px;
-}
+      50% {
+        left: -200%;
+      }
 
-.actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
+      55% {
+        left: -300%;
+      }
 
-.quantity {
-  width: 40px;
-  padding: 5px;
-  text-align: center;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
+      65% {
+        left: -300%;
+      }
 
-.add-to-cart {
-  background: #28a745;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+      66% {
+        left: -200%;
+      }
 
-.add-to-cart:hover {
-  background: #218838;
-}
+      74% {
+        left: -200%;
+      }
 
-.wishlist {
-  background: none;
-  border: none;
-  color: #e63946;
-  font-size: 20px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
+      75% {
+        left: -100%;
+      }
 
-.wishlist:hover {
-  color: #c71d24;
-}
+      85% {
+        left: -100%;
+      }
 
+      90% {
+        left: 0;
+      }
+
+      1000% {
+        left: 0;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="product-card">
-    <img src="greek-yogurt.png" alt="Greek Style Plain Yogurt" class="product-image">
-    <h2 class="product-title">Greek Style Plain Yogurt</h2>
-    <div class="rating">
-      <span class="stars">★★★★★</span>
-      <span class="reviews">(222)</span>
-    </div>
-    <div class="price-section">
-      <span class="original-price">$24.00</span>
-      <span class="discounted-price">$18.00</span>
-      <span class="discount-badge">10% OFF</span>
-    </div>
-    <div class="actions">
-      <input type="number" class="quantity" value="1" min="1">
-      <button class="add-to-cart">Add to Cart</button>
-      <button class="wishlist">&#10084;</button>
-    </div>
+
+  <div class="slider">
+    <figure>
+      <div class="slide">
+        <h1>Gambar Satu</h1>
+        <img src="img/1.jpeg" alt="">
+      </div>
+      <div class="slide">
+        <h1>Gambar Dua</h1>
+        <img src="img/2.jpeg" alt="">
+      </div>
+      <div class="slide">
+        <h1>Gambar Tiga</h1>
+        <img src="img/3.jpeg" alt="">
+      </div>
+      <div class="slide">
+        <h1>Gambar Empat</h1>
+        <img src="img/4.jpeg" alt="">
+      </div>
+    </figure>
   </div>
+
 </body>
-</html>
+
+</html> -->

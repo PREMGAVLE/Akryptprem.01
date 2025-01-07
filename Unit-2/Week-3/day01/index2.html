@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name {
+            text-align: center;
+            background-color: red;
+        }
+
+        #p {
+            border: 20px black;
+            height: 60px;
+            text-align: center;
+            background-color: rgb(5, 250, 78);
+        }
+
+        #result {
+            text-align: center;
+
+            margin-top: 30px;
+            border: 10px black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="name">Akrypt tecnology</h1>
+    <div id="p">
+        <p id="result">result</p>
+    </div>
+    <br>
+    <input type="text" placeholder="Please Enterur name" id=" name">
+    <input type="text" placeholder="Please Enterur name" id="numbar">
+
+    <!-- <select id="gender">
+        <option value="">cheak</option>
+        <option value="male">male</option>
+        <option value="female">female</option>
+    </select> -->
+    <br>
+    <br>
+    <button style="color: red; background-color: black;width:200px;
+     text-align: center;;" id="btn">submit</button>
+
+
+</body>
+<script>
+    let result = document.getElementById("result");
+    let name = document.getElementById(" name");
+    let  numbar = document.getElementById(" numbar");
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click", submitData)
+    function submitData() {
+        result.innerText = `selected name is ${name.value} and gender is ${gender.value} `
+        console.log(name.value)
+        console.log(gender.value)
+    }
+
+</script>
+
+</html>

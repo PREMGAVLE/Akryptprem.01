@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Akrypt Tech.</h1>
+    <div style="width: 500px;height: 200px;border: 2px solid red;">
+        <p id="Result">Result</p>
+    </div>
+    <br>
+    <input type="number"  id="input1" placeholder="input-01">
+  
+    <input type="number"  id="input2" placeholder="input-02">
+  <select  id="choose">
+    <option value=""> sum</option>
+    <option value=""> multiply</option>
+    <option value=""> Subtract</option>
+  </select>
+    <br>
+    <br>
+    <button style="color: brown;" id="btn">Submit</button>
+    <span>    <button style="color: brown;" id="btn2">Submit</button>
+    </span>
+ 
+</body>
+<script>
+let result=document.getElementById("Result");
+let input1=document.getElementById("input1");
+let input2=document.getElementById("input2");
+let choose=document.getElementById("choose");
+let btn=document.getElementById("btn");
+let btn2=document.getElementById("btn");
+
+btn.addEventListener("click",submitData)
+
+function submitData(){
+    let sum=Number(input1.value)+ Number(input2.value)
+    if(sum==0){
+        alert("bhai numbar to dalde")
+        //  result.innerText=`Result is :- ${sum}`
+    } else{
+        // Number(input1.value)+Number(input2.value)
+    result.innerText=`Result is :- ${ Number(input1.value)+ Number(input2.value)}`
+    }
+//    alert("Please Enter your name")
+}
+btn2.addEventListener("click",substract)
+
+function substract(){
+    let sub=Number(input1.value)*Number(input2.value)
+    if(sub==0){
+        alert("bhai numbar to dalde")
+    } else{
+    result.innerText=`Result is :- ${sub}`
+    }
+//    alert("Please Enter your name")
+}
+
+</script>
+
+</html>

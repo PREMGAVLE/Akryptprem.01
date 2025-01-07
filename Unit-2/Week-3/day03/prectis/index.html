@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img{
+            width: 100%;
+            height: 50px;
+
+            text-align: center;
+            background-color: blue;
+        }
+        .child{
+            width: 100%;
+            /* height:200px; */
+            justify-content: center;
+
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            gap:px;
+            /* border: 1px solid red; */
+        }
+        .h2{
+            font-size: 10px;
+            color: rgb(12, 12, 12);
+        }
+        .h4{
+            font-size: 10px;
+            color: red;
+        }
+        .p{
+            font-size: 5px;
+        }
+        .p2{
+            font-size: 10px;
+            background-color:wheat;
+            border-radius: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="cont" style="display: flex; gap: 10px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; "></div>
+</body>
+<script>
+   let  employees= [
+  {
+    item: "PS4 Pro",
+    original: 399.99,
+ discount: 10,
+
+    stock: 3,
+    total: 1199.97,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+  },
+  {
+    discount: 10,
+    item: "Xbox One X",
+    original: 499.99,
+    stock: 1,
+    total: 449.991,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+
+  },
+  {
+    item: "Nintendo Switch",
+    original: 299.99,
+    stock: 4,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+
+    total: 1199.96
+  },
+  {
+ discount: 10,
+
+    item: "PS2 Console",
+    original: 299.99,
+    stock: 1,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+
+    total: 59.99
+  },
+  {
+  discount: 10,
+    item: "Nintendo 64",
+    original: 199.99,
+    stock: 2,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+
+    total: 139.993
+  }
+]
+
+ let cont = document.getElementById("cont");
+ employees.forEach((e,i)=>{
+    let div = document.createElement("div");
+    // div.style.  gap = "10px";
+    div.className="child"
+
+    cont.append(div)
+
+let image=document.createElement("img");
+image.className="img"
+image.src=e.image
+// image.src="https://i.ytimg.com/vi/OKZFHo5p4VA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBThQ8a0hz7_QhipTmgsnFeQj7kgw"
+
+    let h2=document.createElement("h2");
+    h2.className="h2"
+    h2.innerText=`${e.item}`
+    let h4=document.createElement("h4");
+    h4.className="h4"
+    h4.innerText=`  ${e. original }`
+    let p=document.createElement("p");
+    p.className="p"
+    p.innerText=`stock:  ${e.stock}`
+    let p2=document.createElement("p");
+    p2.className="p2"
+    p2.innerText=`  ${e. total}`
+
+    div.append(image,h2,h4,p,p2)
+
+ })
+</script>
+</html>

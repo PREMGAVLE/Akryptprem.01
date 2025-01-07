@@ -1,0 +1,190 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display: flex;
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .first {
+            border: 1px red;
+            /* background-color: blue; */
+            width: 40%;
+            text-align: center;
+        }
+        .second{
+            font-size: 6px;
+            display: flex;
+            gap: 50px;
+            width: 60%;
+            margin: 22px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="flex">
+        <div class="first">
+            <h1>VILLA</h1>
+        </div>
+        <div class="second">
+           <h1 style="color: red;">HOME</h1>
+           <h1> PROPERTY</h1>
+           <h1>PROPERTY DETAILS</h1>
+           <h1>CONTACT US</h1>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html> -->
+ 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <script>
+        function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var gender = document.querySelector('input[name="gender"]:checked');
+    var terms = document.getElementById("terms").checked;
+
+    if (name == "" || email == "" || !gender || !terms) {
+        alert("Please fill out all required fields.");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+
+    </script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gender {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.gender input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 10px;
+}
+
+    </style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Form</h1>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="gender">Gender</label>
+            <div class="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="Female" required>
+            </div>
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+            </select>
+
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions
+            </label>
+<div class="button">
+            <button type="submit">Submit</button>
+            <button type="submit"> reset</button>
+            <button type="submit"> total</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>

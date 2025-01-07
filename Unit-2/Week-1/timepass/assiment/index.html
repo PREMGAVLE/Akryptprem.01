@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Heart</title>
+    <style>
+        body {
+            margin: 0;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: pulse 1.5s ease-out infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 50px;
+            top: 0;
+        }
+
+        .proposal-message {
+            position: absolute;
+            /* top: ; */
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgb(238, 182, 215);
+            font-size: 24px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .heart-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="heart-container">
+    <div class="heart"></div>
+    <div class="proposal-message">Will you marry me?</div>
+</div>
+
+<script>
+    // Optional: Add sound or animation when clicking the heart
+    document.querySelector('.heart').addEventListener('click', function() {
+        alert('You clicked the heart! Will you marry me?');
+    });
+</script>
+
+</body>
+</html>

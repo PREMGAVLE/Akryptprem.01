@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Akrypt Doctor Records</title>
+  </head>
+  <body>
+    <!-- Use this form for data input  -->
+    <form id="form">
+      <input placeholder="Name" type="text" id="name" />
+      <input placeholder="Doctor ID" type="text" id="doctor_id" />
+      <input placeholder="Experience" type="number" id="experience" />
+      <input placeholder="Email" type="email" id="email" />
+      <input placeholder="Mobile No." type="number" id="mobile" />
+      <input type="submit" value="Submit" />
+      <select id="specialization">
+        <option value="">Select Specialization</option>
+        <option value="Dermatologist">Dermatologist</option>
+        <option value="Dentist">Dentist</option>
+        <option value="Gynecologist">Gynecologist</option>
+      </select>
+    </form>
+
+
+    <!-- Use this Select tag for filter part  -->
+    <select id="filter">
+      <option value="">Select Specialization</option>
+      <option value="Dermatologist">Dermatologist</option>
+      <option value="Dentist">Dentist</option>
+      <option value="Gynecologist">Gynecologist</option>
+    </select>
+    <table>
+      <thead>
+        <tr id="row">
+          <th>Name</th>
+          <th>Doctor ID</th>
+          <th>Specialization</th>
+          <th>Experience in Years</th>
+          <th>Email</th>
+          <th>Mobile No</th>
+          <th>Role</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Append Rows here using JS & DOM  -->
+      </tbody>
+    </table>
+  </body>
+ 
+<script>
+     /// cont--->>> means a parant div  jisme catch krege
+    /// creatElementby("id")--->> means element crat krege...
+    /// text edit--->>> means text edit krege
+    /// append()--->>> means parent div me child element add krege
+    // Get the form and table body elements
+
+    let   form = document.querySelector("form");
+let tbody = document.querySelector("tableBody");
+
+let doctorsRecords = [];
+  form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let record = {
+    name:   form.name.value,
+    docID:   form.docID.value,
+    specialization:   form.dept.value,
+    experience:   form.exp.value,
+    email:   form.email.value,
+    mobNo:   form.mbl.value,
+  };
+  doctorsRecords.push(record);
+    form.reset(); // it will reset the input data after pushing
+  // console.log(doctorsRecords);
+
+  tbody.innerHTML = null;
+  doctorsRecords.forEach((doctor, index) => {
+    let tr = document.createElement("tr");
+    let tdName = document.createElement("td");
+    let tdID = document.createElement("td");
+    let tdSpln = document.createElement("td");
+    let tdExp = document.createElement("td");
+    let tdEmail = document.createElement("td");
+    let tdMbl = document.createElement("td");
+    let tdRole = document.createElement("td");
+    let tdDelete = document.createElement("button");
+
+    tdName.innerText = doctor.name;
+    tdID.innerText = doctor.docID;
+    tdSpln.innerText = doctor.specialization;
+    tdExp.innerText = doctor.experience;
+    tdEmail.innerText = doctor.email;
+    tdMbl.innerText = doctor.mobNo;
+    tdDelete.innerText = "X";
+    tdDelete.style.backgroundColor = "red";
+
+    if (tdExp.innerText > 5) {
+      tdRole.innerText = "Senior";
+    }
+    else if (tdExp.innerText >= 2 && tdExp.innerText <= 5) {
+      tdRole.innerText = "Junior";
+    }
+    else if (tdExp.innerText <= 1 && tdExp.innerText >= 1) {
+      tdRole.innerText = "Trainee";
+    }
+    else {
+      tdRole.innerText = "";
+    }
+
+    tdDelete.addEventListener("click", () => {
+      // Find the index of the current record in the doctorsRecords array
+      const index = doctorsRecords.findIndex((record) => record.docID === doctor.docID);
+
+      // Remove the record from the array
+      if (index !== -1) {
+        doctorsRecords.splice(index, 1);
+      }
+
+      // Remove the corresponding table row from the DOM
+      tr.remove();
+    });
+
+    tr.append(tdName, tdID, tdSpln, tdExp, tdEmail, tdMbl, tdRole, tdDelete);
+    tbody.append(tr);
+  });
+});
+    // var form = document.getElementById('form');
+    // var tableBody = document.getElementById('tableBody');
+     
+    // let arr = []
+    // // console.log(cont.innerHTML)
+    // form.addEventListener("submit", function (e) {
+    //     e.preventDefault();
+    //     // cont.innerHTML=null;
+    //     tablebody.innerHTML = null;
+
+    //     let obj = {
+    //         name: form.name.value,
+    //         id:form.doctor_id.value,
+    //         experience:form.experience.value,
+    //         email: form.email.value,
+    //          mobile: form.mobile.value,
+    //          submit: form.submit.value,
+            
+
+    //     }
+    //     console.log(obj)
+
+    //     arr.push(obj)
+    //     console.log(arr)
+    //     fromdata(arr)
+
+    // })
+
+</script>
+</html>

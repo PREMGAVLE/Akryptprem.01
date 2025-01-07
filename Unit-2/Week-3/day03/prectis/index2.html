@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" id="name" placeholder="enter your name ">
+        <input type=" email" id="email" placeholder="enter your  email ">
+        <input type=" phone" id="phone" placeholder="enter your  phone ">
+        <select id="course">
+            <option value="course">select course</option>
+            <option value=" FSWD"> FSWD </option>
+            <option value="FD">FD</option>
+            <option value="BD ">BD</option>
+
+        </select>
+        <input type="submit" id="submit">
+    </form>
+    <br>
+    <div id="cont" style="display: flex; gap: 10px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;border: 2px solid red;">
+    </div>
+
+</body>
+<script>
+    let cont = document.getElementById("cont");
+    // let name = document.getElementById("name");
+    // let email = document.getElementById("email");
+    // let phone = document.getElementById("phone");
+    // let course = document.getElementById("course");
+    let form = document.getElementById("form");
+
+    let obj = {
+        name:form.name.value,
+        email:form.email.value,
+        phone:form.phone.value,
+        course:form.course.value
+    }
+    let arr = []
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        cont.innerHTML = null;
+        console.log(obj)
+        arr.push(obj)
+        console.log(arr)
+        arr.forEach((e, i) => {
+            let div = document.createElement("div");
+            // div.style.  gap = "10px";
+            div.className = "child"
+
+            cont.append(div)
+
+            let h2 = document.createElement("h2");
+            h2.className = "h2"
+            h2.innerText = `${e.name}`
+            let h4 = document.createElement("h4");
+            h4.className = "h4"
+            h4.innerText = `  ${e.email}`
+            let p = document.createElement("p");
+            p.className = "p"
+            p.innerText = `stock:  ${e.phone}`
+            let p2 = document.createElement("p");
+            p2.className = "p2"
+            p2.innerText = `${e.course}`
+
+            div.append(h2, h4, p, p2)
+
+        })
+
+    })
+</script>
+
+</html>

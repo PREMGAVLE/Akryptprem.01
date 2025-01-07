@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Ha bhai idher he </h1>
+  <hr>
+  <div id="formdata">
+    <table>
+      <!-- Dont change order of columns -->
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email address</th>
+          <th>ID</th>
+          <th>Mobile Number</th>
+        </tr>
+    </table>
+    </thead>
+    <tbody>
+  </div>
+</body>
+<script>
+  // Your JavaScript code here
+  let formdata = document.getElementById("formdata");
+   let tbody=document.querySelectorAll("tbody")
+   let table = document.createElement("table");
+  let arr = JSON.parse(localStorage.getItem("savearrdata"))
+  // console.log(arr)
+  if (arr == null) {
+        // alert("Please fill all fields");
+      arr = [];
+      console.log(arr);
+      fordata()
+    }
+  
+  
+    function fordata() {
+
+
+      arr.forEach((e, i) => {
+        let tr = document.createElement("tr")
+        tablebody.append(tr)
+
+
+        let snTd = document.createElement("td")
+        snTd.innerText = i + 1
+
+
+        let nameTd = document.createElement("td")
+        nameTd.innerText = e.name
+
+
+        let emailTd = document.createElement("td")
+        emailTd.innerText = e.email
+        let idTd = document.createElement("td")
+        idTd.innerText = e.id
+        let phoneTd = document.createElement("td")
+        phoneTd.innerText = e.number
+        let department = document.createElement("td")
+        department.innerText = e.department
+
+
+      })
+      tr.append(nameTd, emailTd, idTd, phoneTd, department)
+    }
+</script>
+
+</html>

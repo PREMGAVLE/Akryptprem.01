@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child {
+            width: 200px;
+            height: 200px;
+            color: aqua;
+        }
+
+        .heading {
+            color: red;
+        }
+
+        .image {
+            width: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" id="form">
+
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <input type="email" id="email" placeholder="Enter Your Email">
+        <input type="phone" id="phone" placeholder="Enter Your phone">
+        <input type="addresh" id="addresh" placeholder="Enter Your addresh">
+        <input type="fees" id="fees" placeholder="fees">
+
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="fswd">FSWD</option>
+            <option value="fd">FD</option>
+            <option value="bd">BD</option>
+        </select>
+        <input type="submit" id="submit">
+
+    </form>
+    <select id=""></select>
+    <hr>
+    <table border="1" style="border: 1px solid rgb(0, 4, 255);">
+
+        <tr>
+            <th>S.no</th>
+            <th>name</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>addres</th>
+            <th> course</th>
+            <th>fees</th>
+
+            <tbody id="tablebody">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+<script>
+    let form = document.getElementById("form")
+    let cont = document.getElementById("cont");
+    let tablebody = document.getElementById("tablebody");
+    let arr = []
+    // console.log(cont.innerHTML)
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // cont.innerHTML=null;
+        tablebody.innerHTML = null;
+
+        let obj = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            addresh: form.addresh.value,
+            course: form.course.value,
+            fees: form.fees.value,
+
+        }
+        console.log(obj)
+
+        arr.push(obj)
+        console.log(arr)
+        fromdata(arr)
+
+    })
+    function fromdata(arr) {
+        arr.forEach((e, i) => {
+            let tr = document.createElement("tr")
+            tablebody.append(tr)
+
+            let snTd = document.createElement("td")
+            snTd.innerHTML = i + 1
+
+            let nameTd = document.createElement("td")
+            nameTd.innerHTML = e.name
+
+            let emailTd = document.createElement("td")
+            emailTd.innerHTML = e.email
+
+            let courseTd = document.createElement("td")
+            courseTd.innerHTML = e.course
+
+            let feesTd = document.createElement("td")
+            feesTd.innerHTML = e.fees
+            let phoneTd = document.createElement("td")
+            phoneTd.innerHTML = e.phone
+            let addresTd = document.createElement("td")
+            addresTd.innerHTML = e.addresh
+
+
+
+
+            tr.append(snTd, nameTd, emailTd, phoneTd, addresTd, courseTd, feesTd,)
+
+
+        })
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child {
+            width: 200px;
+            height: 200px;
+            /* color: aqua; */
+        }       
+
+        .heading {
+            color: red;
+            /* font-size: 10px; */
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <form action="" id="form">
+
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <input placeholder="Employee ID" type="text" id="employee_id" />
+        <input placeholder="Experience" type="number" id="experience" />
+        <input type="email" id="email" placeholder="Enter Your Email">
+        <input placeholder="Mobile No." type="number" id="mobile" />
+
+        <select id="course">
+            <option value="">Select Department</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+            <option value="Engineering">Engineering</option>
+        </select>
+
+        <!-- <select  id="course">
+            <option value="">Select Course</option>
+            <option value="fswd">FSWD</option>
+            <option value="fd">FD</option>
+            <option value="bd">BD</option>
+        </select> -->
+        <input type="submit" id="submit">
+
+    </form>
+    <hr>
+    <div id="cont" style="display: flex;"> </div>
+
+
+
+</body>
+<script>
+    let form = document.getElementById("form")
+    let cont = document.getElementById("cont");
+    let arr = []
+    console.log(cont.innerHTML)
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        cont.innerHTML = null;
+
+        let obj = {
+            name: form.name.value,
+            employee_id: form.employee_id.value,
+            experience: form.experience.value,
+            email: form.email.value,
+            course: form.course.value,
+            mobile: form.mobile.value
+        }
+        console.log(obj)
+
+        arr.push(obj)
+        console.log(arr)
+
+
+
+        arr.forEach((ele, i) => {
+            let div = document.createElement("div");
+            // div.style.border = "2px solid green";
+            div.className = "child";
+            cont.append(div);
+
+            let heading = document.createElement("h2");
+            heading.className = "heading";
+            heading.innerText = `Name: ${ele.name}`;
+
+            let heading2 = document.createElement("h5");
+            heading2.innerText = `Email: ${ele.email}`;
+
+            let p = document.createElement("p");
+            p.innerText = `Course: ${ele.course}`;
+
+            let docid = document.createElement("p");
+            docid.innerText = `Employee ID: ${ele.employee_id}`;
+
+            let exp = document.createElement("p");
+            exp.innerText = `Experience: ${ele.experience}`;
+
+            let mob = document.createElement("p");
+            mob.innerText = `Mobile: ${ele.mobile}`;
+            div.append(heading, heading2, p, docid, exp, mob);
+
+            // div.append(heading, heading2, p);
+        });
+
+    })
+
+
+
+</script>
+
+</html>

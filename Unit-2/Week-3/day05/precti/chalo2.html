@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img style="width: 200px; height: 200px;" src="https://cdn.pixabay.com/photo/2014/12/10/05/50/english-bulldog-562723_960_720.jpg"/>
+    <button onclick="Increament()" id="btn">👍</button>
+    <button onclick="Increament2()" id="btn1">👎</button>
+    <h1 id="like">0</h1>
+    <h1 id="dislike">0</h1>
+</body>
+<script>
+    let like=document. getElementById("like");
+    let dislike=document. getElementById("dislike");
+    let count=localStorage.getItem("counter")
+    if(count==null){
+        count=0
+    }else{
+        let like=document. getElementById("like");
+        like.innerHTML=count;
+        dislike.innerHTML=count;
+    }
+    function Increament(){
+        count++;
+        localStorage.setItem("counter",count)
+        like.innerHTML=count;
+    }
+    function Increament2(){
+        count++;
+        localStorage.setItem("counter",count)
+        dislike.innerHTML=count;
+    }
+</script>
+</html>

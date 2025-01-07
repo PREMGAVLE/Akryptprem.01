@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="cont" style="display: flex; border: 2px solid red; height: 200px;"></div>
+</body>
+<script>
+    /// cont--->>> means a parant div  jisme catch krege
+    /// creatElementby("id")--->> means element crat krege...
+    /// text edit--->>> means text edit krege
+    /// append()--->>> means parent div me child element add krege
+    let cont = document.getElementById("cont")
+    // let h1 = document.createElement("h1")
+    // h1.innerText = ("Hello world")
+    // h1.style.color = "blue"
+    // cont.append(h1)
+    // let arr = ["Hello world1", "Hello world2", "Hello world3", "Hello world4"]
+    let  employees=[
+  {
+    item: "PS4 Pro",
+    original: 399.99,
+ discount: 10,
+
+    stock: 3,
+    total: 1199.97,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+  },
+  {
+    discount: 10,
+    item: "Xbox One X",
+    original: 499.99,
+    stock: 1,
+    total: 449.991,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+
+  },
+  {
+    item: "Nintendo Switch",
+    original: 299.99,
+    stock: 4,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+
+    total: 1199.96
+  },
+  {
+ discount: 10,
+
+    item: "PS2 Console",
+    original: 299.99,
+    stock: 1,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+
+    total: 59.99799999999999
+  },
+  {
+  discount: 10,
+    item: "Nintendo 64",
+    original: 199.99,
+    stock: 2,
+image:"https://akrypttechnologies.com/_next/static/media/Akrypt%20Technologies%20Logo%20Full%20Transparent%20White.fb8c32d4.svg",
+
+    total: 139.993
+  }
+]
+
+    // arr.forEach((e)=>{
+    //     let h1=document.createElement("h1")
+    //     h1. innerText=("Hello world") 
+    //     h1.style.color=" green"
+    //     cont.append(h1)
+    // })
+     employees.forEach((e) => {
+        let div = document.createElement("div")
+        // div.style.width="100px"
+        // div.style.border = "1px solid green"
+        // cont.append(div)
+
+        let heading1 = document.createElement("h1")
+        heading1.innerText =e
+        //  "Name:> alica"
+        let price=document.createElement("p")
+        price.innerText="devlopers"
+        div.append(heading1,price)
+     })
+</script>
+
+</html>

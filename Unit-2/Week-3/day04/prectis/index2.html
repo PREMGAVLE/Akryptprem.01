@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Akrypt Doctor Records</title>
+</head>
+<body>
+        <!-- use this form for data inpute -->
+    <form id="form">
+        <input type="text" placeholder=" Name" id="name"  />
+        <input type="text" placeholder="Doctor ID" id=" doctor_id" />
+        <select id="specialization">
+            <option value=" "> Select specialization</option>
+            <option value=" Dermatologist"> Dermatologist</option>
+            <option value=" Dentist"> Dentist</option>
+            <option value=" Gynecologist"> Gynecologist</option>
+        </select>
+        <input placeholder="Experience" type="number" id="experience">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="mobile" placeholder="Mobile No." required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Doctor ID</th>
+                <th>Specialization</th>
+                <th>Experience in years</th>
+                <th> Email</th>
+                <th>Mobile No</th>
+                <th>Role</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="doctorTableBody">
+            <!-- Rows will be appended here -->
+        </tbody>
+    </table>
+
+    <script >
+        // Get references to the form and tbody element
+let form = document.getElementById('form');
+let tableBody = document.getElementById('doctorTableBody');
+
+// Handle form submission
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+
+    // Get the values from the form fields
+    let name = document.getElementById('name').value;
+    let  doctor_id = document.getElementById(' doctor_id').value;
+    let specialization = document.getElementById('specialization').value;
+    let experience = parseInt(document.getElementById('experience').value);
+    let email = document.getElementById('email').value;
+    let mobile = document.getElementById('mobile').value;
+
+    // Determine the role based on experience
+    let role = '';
+    if (experience > 5) {
+        role = 'Senior';
+    } else if (experience >= 2) {
+        role = 'Junior';
+    } else {
+        role = 'Trainee';
+    }
+
+    // Create a new row in the table
+    let row = document.createElement('tr');
+
+    // Create cells and append them to the row
+    row.innerHTML = `
+        <td>${name}</td>
+        <td>${ doctor_id}</td>
+        <td>${specialization}</td>
+        <td>${experience}</td>
+        <td>${email}</td>
+        <td>${mobile}</td>
+        <td>${role}</td>
+        <td><button class="deleteBtn">Delete</button></td>
+    `;
+
+    // Append the row to the table body
+    tableBody.appendChild(row);
+
+    // Clear the form after submission
+    form.reset();
+});
+
+// Handle deletion of a row
+tableBody.addEventListener('click', function (event) {
+    if (event.target && event.target.classList.contains('deleteBtn')) {
+        // Delete the row when the delete button is clicked
+        event.target.closest('tr').remove();
+    }
+});
+
+    </script>
+</body>
+</html>

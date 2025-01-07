@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child {
+            width: 200px;
+            height: 200px;
+            color: aqua;
+        }
+
+        .heading {
+            color: red;
+        }
+
+        .image {
+            width: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" id="form">
+
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <input placeholder="Doctor ID" type="text" id="doctor_id" />
+        <input placeholder="Experience" type="number" id="experience" />
+        <input type="email" id="email" placeholder="Enter Your Email">
+        <input type="phone" id="phone" placeholder="Enter Your phone">
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="fswd">FSWD</option>
+            <option value="fd">FD</option>
+            <option value="bd">BD</option>
+        </select>
+        <input type="submit" id="submit">
+
+    </form>
+    <select id=""></select>
+    <hr>
+    <table border="1" style="border: 1px solid rgb(0, 4, 255);">
+
+        <tr>
+            <th>S.no</th>
+            <th>name</th>
+            <th> doctor_id</th>
+            <th>experience</th>
+            <th>email</th>
+            <th>phone</th>
+            <th> course</th>
+            <th>Role</th>
+            <th>Delete</th>
+
+
+            <tbody id="tablebody">
+
+        </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+<script>
+    let form = document.getElementById("form")
+    let cont = document.getElementById("cont");
+    let tablebody = document.getElementById("tablebody");
+    let arr = []
+    // console.log(cont.innerHTML)
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // cont.innerHTML=null;
+        tablebody.innerHTML = null;
+        let role = '';
+        if (experience > 5) {
+            role = 'Senior';
+        } else if (experience >= 2) {
+            role = 'Junior';
+        } else {
+            role = 'Trainee';
+        }
+        let obj = {
+            name: form.name.value,
+            doctor_id: form.doctor_id.value,
+            experience: form.experience.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            course: form.course.value,
+            role:form.role.value
+            // row:form.row.value
+
+
+        }
+        console.log(obj)
+
+        arr.push(obj)
+        console.log(arr)
+        fromdata(arr)
+
+    })
+    function fromdata(arr) {
+        arr.forEach((e, i) => {
+            let tr = document.createElement("tr")
+            tablebody.append(tr)
+
+            let snTd = document.createElement("td")
+            snTd.innerHTML = i + 1
+
+            let nameTd = document.createElement("td")
+            nameTd.innerHTML = e.name
+            let idTd = document.createElement("td")
+            idTd.innerHTML = e.doctor_id
+            let experience = document.createElement("td")
+            experience.innerHTML = e.experience
+
+            let emailTd = document.createElement("td")
+            emailTd.innerHTML = e.email
+
+            let courseTd = document.createElement("td")
+            courseTd.innerHTML = e.course
+
+
+            let phoneTd = document.createElement("td")
+            phoneTd.innerHTML = e.phone
+            let  roleTd = document.createElement("td")
+             roleTd.innerHTML = e.role
+
+
+
+
+
+            tr.append(snTd, nameTd, idTd, experience, emailTd, phoneTd, courseTd,roleTd)
+
+
+        })
+    }
+
+</script>
+
+</html>

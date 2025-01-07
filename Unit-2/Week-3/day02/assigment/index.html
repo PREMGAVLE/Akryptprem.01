@@ -1,0 +1,222 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard</title>
+  <style>
+    #score-box {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+  </style>
+     <link rel="stylesheet" href="style.css">  
+ </head>
+<body>
+    <h1>Leaderboard</h1>
+    
+    <div id="score-box">
+        <h2>SCORE: <span id="current-score"></span></h2>
+        <button onclick="resetScore()">Reset</button>
+    </div>
+
+    <div id="min-max-box">
+        <h2>MIN: <span id="min-score">N/A</span></h2>
+        <h2>MAX: <span id="max-score">N/A</span></h2>
+    </div>
+
+    <div id="number-buttons">
+        <button onclick="appendToScore(1)">1</button>
+        <button onclick="appendToScore(2)">2</button>
+        <button onclick="appendToScore(3)">3</button>
+        <button onclick="appendToScore(4)">4</button>
+        <button onclick="appendToScore(5)">5</button>
+        <button onclick="appendToScore(6)">6</button>
+        <button onclick="appendToScore(7)">7</button>
+        <button onclick="appendToScore(8)">8</button>
+        <button onclick="appendToScore(9)">9</button>
+        <button onclick="appendToScore(0)">0</button>
+        <button onclick="enterScore()">ENTER</button>
+    </div>
+
+    <script>
+        let currentScore = '';
+        let minScore = null;
+        let maxScore = null;
+
+        function appendToScore(number) {
+            currentScore += number;
+            document.getElementById('current-score').textContent = currentScore;
+        }
+
+        function resetScore() {
+            // currentScore = '';
+            document.getElementById('current-score').textContent = '';
+        }
+
+        function enterScore() {
+            if (currentScore != '') {
+                currentScore = parseInt(currentScore);
+
+                if (minScore === null || currentScore < minScore) {
+                    minScore = currentScore;
+                    document.getElementById('min-score').textContent = minScore;
+                }
+
+                if (maxScore === null || currentScore > maxScore) {
+                    maxScore = currentScore;
+                    document.getElementById('max-score').textContent = maxScore;
+                }
+
+                resetScore();
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Games</title>
+  </head>
+  <body>
+    <div id="min"></div>
+    <div id="max"></div>
+    <div id="score">
+    </div>
+    <div id="keypad">
+      <button>0</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>7</button> 
+      <button>8</button>
+      <button>9</button>
+    </div>
+    <button id="enter">ENTER</button>
+  </body>
+  <script>
+
+
+  </script> 
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .calculator {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  
+
+
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('/')">/</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('*')">*</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('.')">.</button>
+      <button onclick="calculateResult()">=</button>
+      <button onclick="appendToDisplay('+')">+</button>
+    </div>
+  </div>
+
+
+</body>
+<script>
+  function appendToDisplay(value) {
+    document.getElementById('display').value += value;
+  }
+
+  function calculateResult() {
+    const display = document.getElementById('display');
+    const expression = display.value;
+
+    // Split the expression into numbers and operator
+    const operators = ['+', '-', '*', '/'];
+    let operator = '';
+    for (let op of operators) {
+      if (expression.includes(op)) {
+        operator = op;
+        break;
+      }
+    }
+
+    if (operator) {
+      const [num1, num2] = expression.split(operator).map(Number);
+      const result = calculate(num1, num2, operator);
+      display.value = result;
+    } else {
+      display.value = 'Error'
+    }
+  }
+</script>
+
+</html>

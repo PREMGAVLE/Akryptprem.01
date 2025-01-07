@@ -1,0 +1,42 @@
+<!-- On clicking on Change Text color to red, change color of h1 tag to red On
+clicking on Change Text color to yellow, change color of h1 tag to yellow -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* h1 {
+            text-align: center;
+            margin: 30px;
+        } */
+        /* button{
+            /* text-align: center; */
+            /* justify-content: center; */
+            /* margin: 70px; */
+        /* } */ 
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Masai School</h1>
+    <button onClick="changeRed()">Change Text color to red</button>
+    <button onClick="changeYellow()">Change Text color to yellow</button>
+
+    <script>
+      // Function to change the text color to red
+      function changeRed() {
+        document.getElementById('heading').style.color = 'red';
+      }
+
+      // Function to change the text color to yellow
+      function changeYellow() {
+        document.getElementById('heading').style.color = 'yellow';
+      }
+    </script>
+  </body>
+</html>
+
+
+

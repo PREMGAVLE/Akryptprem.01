@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            background-color: red;
+            color: white;
+        }
+
+        .calcu {
+            background-color: rgb(10, 10, 250);
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(4,1);
+            /* grid-template-row;; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>calculator day-01</h1>
+    <br>
+    <br>
+    <div class="calcu">
+        <button class="btn">01</button>
+        <button class="btn">02</button>
+        <button class="btn">03</button>
+        <button class="btn">04</button>
+        <button class="btn">05</button>
+        <button class="btn">06</button>
+        <button class="btn">07</button>
+        <button class="btn">08</button>
+        <button class="btn">09</button>
+        <button class="btn">10</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <button class="btn">submit </button>
+
+
+</body>
+<script>
+    // get all button elements
+    var buttons = document.querySelectorAll(" .calcu .btn");
+    console.log(buttons)
+    buttons.forEach(function(prem,i){
+        prem.addEventListener("click",function(){
+            console.log(prem,inerHtml);
+        })
+    })
+    // console.log(buttons)
+    // add event listener to each button
+    // for (var i = 0; i < buttons.length; i++) {
+    //     buttons[i].addEventListener("click", function () {
+    //         console.log(event.target. innerText);
+            // if (this.textContent == 1) {
+            //     console.log(" one")
+            // } else if (this.textContent == 2) {
+            //     console.log(" two")
+
+            // } else if (this.textContent == 3) {
+            //     console.log("  three")
+            // }
+            // else if (this.textContent == 4) {
+            //     console.log("   four")
+            // }
+            // else if (this.textContent == 5) {
+            //     console.log("five")
+            // }
+            // else if (this.textContent == 6) {
+            //     console.log("six")
+            // }
+            // else if (this.textContent == 7) {
+            //     console.log("seven")
+            // }
+            // else if (this.textContent == 8) {
+            //     console.log("eight")
+            // }
+            // else if (this.textContent == 9) {
+            //     console.log("nine")
+            // }
+            // else if (this.textContent == 10) {
+            //     console.log("ten")
+            // }else{
+            //     console.log("submit")
+            // }
+            // get the text content of the button that was clicked
+
+        // })
+    // }
+</script>
+
+</html>
